@@ -1,6 +1,10 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@0.0.10
+steps:
+  - run:
+      name: run-tests
+      command: npm test
 workflows:
   heroku_deploy:
     jobs:
